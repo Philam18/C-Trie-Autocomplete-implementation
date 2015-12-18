@@ -20,7 +20,11 @@ _*_*_*_*_*_*  >   gcc -o test complete.o trie.o *_*_*_*_*_*_*_*
   int main(){
   trie_t trie;  //Instantiate new Trie ADT
   initialize(&trie);  //Initialize the Trie
-  FILE *file = fopen("american-english-no-accents","r");  //Open the dictionary for reading only
+  
+  //USER MUST INPUT THEIR OWN DICTIONARY, limited to [A-Z, a-z, and ']
+  FILE *file = fopen("___INSERT___DICTIONARY___HERE____","r");  
+  
+  //Open the dictionary for reading only
   if (!file)  return 0;  //The file opened successfully
   char word[WORD_SIZE];  //Initiate a buffer "word"
   while (fscanf(file, "%s", word)!=EOF){  //Read words into variable "word"
